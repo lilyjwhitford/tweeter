@@ -1,6 +1,7 @@
 nav {
-  font-family: "Bungee", sans-serif;
-  font-weight: 600;
+  display: flexbox;
+  justify-content: space-between;
+  align-items: center;
   color: #FFFFFF;
   height: 120px;
   width: 100%;
