@@ -17,6 +17,7 @@ nav span {
 .nav-tweet-btn {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 .fa-solid {
