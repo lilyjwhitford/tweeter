@@ -9,7 +9,7 @@ nav {
   padding: 0 1.5em;
 }
 
-.header {
+nav span {
   font-family: "Bungee", sans-serif;
   font-weight: 600;
 }
@@ -19,6 +19,6 @@ nav {
   align-items: center;
 }
 
-.nav-tweet-btn i {
+.fa-solid {
   color: #ff0000;
 }
