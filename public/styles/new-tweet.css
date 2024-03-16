@@ -1,0 +1,38 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.btn-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Bungee", sans-serif;
+}
+
+.btn-count button {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #4056A1;
+  border: none;
+  padding: 0.5%;
+  padding-inline-end: 1%;
+  padding-inline-start: 1%;
+}
+
+textarea {
+  width: 100%;
+  padding: 1.5%;
+  background-color: inherit;
+  height: auto;
+  border: none;
+  border-bottom: 0.3em solid #31302b;
+}
+
+label {
+  font-weight: 600;
+  font-size: 90%;
+}
