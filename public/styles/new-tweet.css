@@ -19,6 +19,12 @@
   background-color: #4056A1;
   border: none;
   padding: 1%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-count button:hover {
+  background-color: #304060;
+  color: #ffffff;
 }
 
 textarea {
