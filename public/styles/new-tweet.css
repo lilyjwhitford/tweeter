@@ -41,3 +41,7 @@ label {
   font-size: 90%;
   margin-top: 10px;
 }
+
+.max-count {
+  color: #ff0000;
+}
