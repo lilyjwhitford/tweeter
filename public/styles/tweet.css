@@ -27,6 +27,10 @@ article hr {
   margin-bottom: 0px;
 }
 
+.tweet-text {
+  padding: 5px 10px;
+}
+
 .avatar {
   display: flex;
   justify-content: space-between;
@@ -35,7 +39,7 @@ article hr {
 
 .avatar img {
   width: 60px;
-  height: auto;
+  height: 60px;
   margin: 12px;
 }
 
@@ -64,8 +68,10 @@ footer p {
 
 article:hover {
   box-shadow: 6px 6px #b3c0ef;
+  transition: 0.3s ease;
 }
 
 .icon:hover {
   color: #dfa033;
+  transition: 0.3s ease;
 }
