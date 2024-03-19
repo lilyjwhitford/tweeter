@@ -4,19 +4,32 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const $tweet = $(`<article class="tweet">Hello world</article>`);
 
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
+const data = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
       "handle": "@SirIsaac"
     },
-  "content": {
+    "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-  "created_at": 1461116232227
-}
+    "created_at": 1461116232227
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd" },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088
+  }
+]
+
 
 $(document).ready(function() {
   const createTweetElement = function(tweet) {
@@ -24,13 +37,13 @@ $(document).ready(function() {
       <article class="tweet">
           <header>
             <div class="avatar">
-              <img src="${user.avatars}">
-              <p class="name">${user.name}</p>
+              <img src="${tweet.user.avatars}">
+              <p class="name">${tweet.user.name}</p>
             </div>
-            <p class="username"><b>${user.handle}</b></p>
+            <p class="username"><b>${tweet.user.handle}</b></p>
           </header>
           <div class="tweet-text">
-            <p>${user.content}</p>
+            <p>${tweet.content.text}</p>
           </div>
           <hr>
           <footer>
@@ -47,11 +60,11 @@ $(document).ready(function() {
   };
 
   const renderTweets = function(tweets) {
-    // loop through tweets 
     for (let tweet of tweets) {
-      const tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      const $tweet = createTweetElement(tweet);
+      $('.tweets-container').append($tweet);
     }
   };
 
+  renderTweets(data);
 });
