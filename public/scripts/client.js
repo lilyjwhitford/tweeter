@@ -62,9 +62,31 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('.tweets-container').prepend($tweet);
+      $(".tweets-container").prepend($tweet);
     }
   };
 
   renderTweets(data);
+
+  $(".tweet-form").on("submit", function(event) {
+    // add event listener for submit and prevent default behavior
+    event.preventDefault();
+    
+    // serialize form data
+    const formData = $(this).serialize();
+
+    // send serialized data to the server
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: formData,
+      success: function(response) {
+        console.log(response);
+      },
+      error: function(error) {
+        console.log("Error:", error);
+      }
+    });
+  });
+  
 });
