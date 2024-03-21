@@ -45,3 +45,35 @@ label {
 .max-count {
   color: #ff0000;
 }
+
+.error-msg {
+  display: none;
+  color: #ff0000;
+  font-weight: bold;
+  border: 0.1em solid #ff0000;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+ } 
+
+#empty-error {
+  color: #ff0000;
+  font-weight: bold;
+  border: 0.1em solid #ff0000;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+}
+
+#length-error {
+  color: #ff0000;
+  font-weight: bold;
+  border: 0.1em solid #ff0000;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+}
+
+.fa-circle-exclamation {
+  padding: 0.5em;
+}

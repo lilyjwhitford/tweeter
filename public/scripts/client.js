@@ -68,26 +68,26 @@ $(document).ready(function() {
     let $text = $("#tweet-text").val();
     $("#tweet-text").val("");
 
-    if ($text === "") {
-      alert("Plese enter some text!");
+    $(".error-msg").slideUp(); // ensure all error messages are hidden
+    
+    if ($text.length === 0) {
+      $("#empty-error").slideDown();
     } else if ($text.length > 140) {
-      alert("No one wants to hear all that!");
+      $("#length-error").slideDown();
     } else {
-    // send serialized data to the server
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: formData,
-      success: function(response) {
-        console.log(response);
-        loadTweets();
-      },
-      error: function(error) {
-        console.log("Error fetching data:", error);
-        }
-      });
-    }
+      $.ajax({
+        method: "POST",
+        url: "/tweets",
+        data: formData,
+        success: function(response) {
+          console.log(response);
+          loadTweets();
+        },
+        error: function(error) {
+          console.log("Error fetching data:", error);
+          }
+        });
+      }
   });
 
-  
 });
