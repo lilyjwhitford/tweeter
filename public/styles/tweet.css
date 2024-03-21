@@ -3,6 +3,7 @@ article {
   padding: 20px;
   margin-top: 50px;
   margin-bottom: 30px;
+  transition: all 0.3s ease;
 }
 
 article header {
@@ -68,7 +69,6 @@ footer p {
 
 article:hover {
   box-shadow: 6px 6px #b3c0ef;
-  transition: 0.3s ease;
 }
 
 .icon:hover {
