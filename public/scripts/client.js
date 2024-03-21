@@ -40,11 +40,15 @@ $(document).ready(function() {
     }
   };
 
-  // renderTweets(data);
+  const loadTweets = function() {
+    // make ajax GET request to /tweets
+      $.ajax({
+        method: "GET",
+        url: "/tweets",
+      }).then(renderTweets);
+    };
 
-  document.addEventListener('keydown', (event)=> {    
-    console.log(event.key);
-  });
+    loadTweets();
   
 
   $(".tweet-form").on("submit", function(event) {
@@ -70,20 +74,11 @@ $(document).ready(function() {
         loadTweets();
       },
       error: function(error) {
-        console.log("Error:", error);
+        console.log("Error fetching data:", error);
         }
       });
     }
   });
-  
-  const loadTweets = function() {
-  // make ajax GET request to /tweets
-    $.ajax({
-      method: "GET",
-      url: "/tweets",
-    }).then(renderTweets);
-  };
 
-  loadTweets();
   
 });
