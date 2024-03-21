@@ -50,13 +50,10 @@ $(document).ready(function() {
   $(".tweet-form").on("submit", function(event) {
     // add event listener for submit and prevent default behavior
     event.preventDefault();
-    
     // serialize form data
     let formData = $(this).serialize();
-
     let $text = $("#tweet-text").val();
-    console.log("tweet text:", $text);
-    console.log("text length:", $text.length);
+    $("#tweet-text").val("");
 
     if ($text === "") {
       alert("Plese enter some text!");
@@ -70,6 +67,7 @@ $(document).ready(function() {
       data: formData,
       success: function(response) {
         console.log(response);
+        loadTweets();
       },
       error: function(error) {
         console.log("Error:", error);
