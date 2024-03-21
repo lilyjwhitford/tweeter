@@ -42,13 +42,27 @@ $(document).ready(function() {
 
   // renderTweets(data);
 
+  document.addEventListener('keydown', (event)=> {    
+    console.log(event.key);
+  });
+  
+
   $(".tweet-form").on("submit", function(event) {
     // add event listener for submit and prevent default behavior
     event.preventDefault();
-
+    
     // serialize form data
-    const formData = $(this).serialize();
+    let formData = $(this).serialize();
 
+    let $text = $("#tweet-text").val();
+    console.log("tweet text:", $text);
+    console.log("text length:", $text.length);
+
+    if ($text === "") {
+      alert("Plese enter some text!");
+    } else if ($text.length > 140) {
+      alert("No one wants to hear all that!");
+    } else {
     // send serialized data to the server
     $.ajax({
       method: "POST",
@@ -59,8 +73,9 @@ $(document).ready(function() {
       },
       error: function(error) {
         console.log("Error:", error);
-      }
-    });
+        }
+      });
+    }
   });
   
   const loadTweets = function() {
