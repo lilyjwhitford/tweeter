@@ -40,15 +40,17 @@
       </div>
     </nav>
 
-    <header>
+    <div class="tweet-content">
+
+    <header class="header-container">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Lily Whitford</h2>
+          <h2><strong>Lily</strong> Whitford</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
@@ -57,7 +59,7 @@
         <span class="error-msg" id="length-error"><i class="fa-solid fa-circle-exclamation"></i>No one wants to read all that!<i class="fa-solid fa-circle-exclamation"></i></span>
         <h2>Compose Tweet</h2>
         <form class="tweet-form" action="/tweets" method="POST">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?!"></textarea>
           <div class="btn-count">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
@@ -68,5 +70,6 @@
         </section>
       </section>
     </main>
+  </div>
   </body>
 </html>
