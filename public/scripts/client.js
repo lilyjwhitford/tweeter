@@ -82,6 +82,7 @@ $(document).ready(function() {
         success: function(response) {
           console.log(response);
           loadTweets();
+          $(".counter").text(140);
         },
         error: function(error) {
           console.log("Error fetching data:", error);
