@@ -27,6 +27,8 @@ body {
  */
 
  main {
+  display: flex;
+  align-items: center;
   width: 90%;
   background-color: inherit;
   margin: 0 auto;
