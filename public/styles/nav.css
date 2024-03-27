@@ -25,3 +25,18 @@ nav {
 .fa-angles-down {
   color: #ff0000;
 }
+
+/* smartphone/tablet*/
+
+@media only screen and (max-width: 1024px) {
+  nav {
+     background-color: #dfa033; /* initial color of the navbar */
+     background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+     transition: 0.2s ease-in-out;
+  }
+ 
+  .nav-scrolled {
+     background-color: transparent;
+     background-image: none;
+  }
+ }
