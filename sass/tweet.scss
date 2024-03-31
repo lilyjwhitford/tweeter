@@ -1,3 +1,5 @@
+@use "_variables" as *;
+
 article {
   border: 4px solid;
   padding: 20px;
@@ -59,7 +61,7 @@ footer p {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  color: #4056A1;
+  color: $tweet-icon-color;
   padding: 1%;
   cursor: pointer;
 }
@@ -69,10 +71,10 @@ footer p {
 }
 
 article:hover {
-  box-shadow: 6px 6px #b3c0ef;
+  box-shadow: 6px 6px $shadow-color;
 }
 
 .icon:hover {
-  color: #dfa033;
+  color: $secondary-nav-background-color;
   transition: 0.3s ease;
 }

@@ -1,3 +1,5 @@
+@use "_variables" as *;
+
 header {
   display: flex;
   flex-direction: column;
@@ -5,18 +7,19 @@ header {
   align-items: center;
   height: 400px;
   width: 100dvw;
-  background-color: #dfa033;
+  background-color: $secondary-nav-background-color;
   background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
   margin-top: 120px;
 }
 
 header h2 {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: $secondary-font;
   font-weight: 350;
-  color: #545149;
+  color: $tweet-font-color;
 }
 
 /* desktop */
+
 @media only screen and (min-width: 1024px) {
   .header-container {
     align-items: center;

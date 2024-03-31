@@ -1,0 +1,48 @@
+@use "_variables" as *;
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $font-color;
+  height: 120px;
+  width: 100%;
+  background-color: $nav-background-color;
+  padding: 0 1.5em;
+  position: fixed;
+  top: 0;
+}
+
+.nav-title {
+  font-family: $primary-font;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.nav-tweet-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;  
+  font-family: $secondary-font;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.fa-angles-down {
+  color: $nav-icon-color;
+}
+
+/* smartphone/tablet*/
+
+@media only screen and (max-width: 1024px) {
+  nav {
+     background-color: $secondary-nav-background-color;
+     background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+     transition: 0.2s ease-in-out;
+  }
+ 
+  .nav-scrolled {
+     background-color: transparent;
+     background-image: none;
+  }
+ }

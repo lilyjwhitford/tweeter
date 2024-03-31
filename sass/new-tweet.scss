@@ -1,3 +1,5 @@
+@use "_variables" as *;
+
 .new-tweet {
   display: flex;
   flex-direction: column;
@@ -10,21 +12,21 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: "Bungee", sans-serif;
+  font-family: $primary-font;
 }
 
 .btn-count button {
-  color: #ffffff;
+  color: $font-color;
   font-size: 1.5rem;
   font-weight: 600;
-  background-color: #4056A1;
+  background-color: $nav-background-color;
   border: none;
   padding: 1%;
 }
 
 .btn-count button:hover {
   background-color: #304060;
-  color: #ffffff;
+  color: $font-color;
   transition: 0.3s ease, color 0.3s ease;
   cursor: pointer;
 }
@@ -35,7 +37,7 @@ textarea {
   background-color: inherit;
   height: auto;
   border: none;
-  border-bottom: 0.3em solid #31302b;
+  border-bottom: 0.3em solid $border-color;
 }
 
 label {
@@ -45,32 +47,32 @@ label {
 }
 
 .max-count {
-  color: #ff0000;
+  color: $nav-icon-color;
 }
 
 .error-msg {
   display: none;
-  color: #ff0000;
+  color: $nav-icon-color;
   font-weight: bold;
-  border: 0.1em solid #ff0000;
+  border: 0.1em solid $nav-icon-color;
   padding: 1em;
   margin: 1em;
   text-align: center;
-}
+ } 
 
 #empty-error {
-  color: #ff0000;
+  color: $nav-icon-color;
   font-weight: bold;
-  border: 0.1em solid #ff0000;
+  border: 0.1em solid $nav-icon-color;
   padding: 1em;
   margin: 1em;
   text-align: center;
 }
 
 #length-error {
-  color: #ff0000;
+  color: $nav-icon-color;
   font-weight: bold;
-  border: 0.1em solid #ff0000;
+  border: 0.1em solid $nav-icon-color;
   padding: 1em;
   margin: 1em;
   text-align: center;

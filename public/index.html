@@ -28,6 +28,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script src="/scripts/composer-char-counter.js"></script>
+    <script src="/scripts/helpers.js"></script>
   </head>
 
   <body>
@@ -48,7 +49,7 @@
       </div>
       <br>
       <div>
-          <h2><strong>Lily</strong> Whitford</h2>
+          <h2><b>Lily</b> Whitford</h2>
       </div>
     </header>
 
@@ -57,7 +58,6 @@
       <section class="new-tweet">
         <span class="error-msg" id="empty-error"><i class="fa-solid fa-circle-exclamation"></i>Humming about nothing? Enter some text!<i class="fa-solid fa-circle-exclamation"></i></span>
         <span class="error-msg" id="length-error"><i class="fa-solid fa-circle-exclamation"></i>No one wants to read all that!<i class="fa-solid fa-circle-exclamation"></i></span>
-        <h2>Compose Tweet</h2>
         <form class="tweet-form" action="/tweets" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?!"></textarea>
           <div class="btn-count">
