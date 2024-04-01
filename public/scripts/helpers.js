@@ -39,7 +39,6 @@ const submitTweet = function(event) {
   // serialize form data
   let formData = $(this).serialize();
   let $text = $("#tweet-text").val();
-  $("#tweet-text").val("");
 
   $(".error-msg").slideUp(); // ensure all error messages are hidden
  
@@ -54,8 +53,10 @@ const submitTweet = function(event) {
       data: formData,
       success: function(response) {
         console.log(response);
+        $(".tweets-container").empty(); // empty tweet container before rendering new tweets
         loadTweets();
         $(".counter").text(140);
+        $("#tweet-text").val("");
       },
       error: function(error) {
         console.log("Error fetching data:", error);
